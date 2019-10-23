@@ -19,7 +19,8 @@ public class DamageReceivingSystem : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        Debug.Log("I've received" + damage);
+        if (other.gameObject == GameObject.FindGameObjectWithTag("PlayerWeapon"))
+            Debug.Log("I've received" + damage);
     }
 
 }
